@@ -1,0 +1,42 @@
+<h1>Users</h1>
+<ul>
+  {% for u in users %}
+    <li>
+      ID {{ u[0] }}: {{ u[1] }} (Score: {{ u[2] }})
+      {% if u[2] < 300 %}
+        ➡ Can only issue "available_to_all" books
+      {% else %}
+        ➡ Can issue all books
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+<hr>
+
+<h2>Issue a Book</h2>
+<form method="POST" action="/issue_book">
+  <label for="user_id">Select User:</label>
+  <input type="number" name="user_id" placeholder="User ID" required>
+
+  <label for="book_id">Select Book:</label>
+  <input type="number" name="book_id" placeholder="Book ID" required>
+
+  <button type="submit">Issue Book</button>
+</form>
+
+<hr>
+
+<h2>Issued Books</h2>
+<ul>
+  {% for ib in issued_books %}
+    <li>
+      Issue ID {{ ib[0] }} → User {{ ib[1] }} Book {{ ib[2] }} (Status: {{ ib[5] }})
+      {% if ib[5] == "issued" %}
+        <a href="/return_book/{{ ib[0] }}">Return Book</a>
+      {% else %}
+        Returned on {{ ib[4] }}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

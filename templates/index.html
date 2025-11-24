@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Management - View Books</title>
+
+  <!-- Link to your custom CSS -->
+  <link rel="stylesheet" href="static/style.css">
+
+  <!-- Optional: Link to Bootstrap if you want it -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+
+  <!-- Optional: Make it responsive on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <h1 class="blue">Library Management System </h1>
+<p><a href="/users">View Users</a> | <a href="/books"title="This shows the list of books available.">View Books</a></p>
+</head>
+<div class="bluearea">
+<hr>
+
+<body>
+  
+ <div class ="container"> 
+<h2>Add User <img src="{{ url_for('static', filename='user.png') }}" alt="icon" width="40px" height="40px"></h2>
+<form method="POST" action="/add_user">
+  <input type="text" name="name" placeholder="User Name" required>
+  <button type="submit">Add User</button> 
+
+  <link rel="stylesheet" href="style.css">
+</form>
+
+<h2>Add Book <img src="{{ url_for('static', filename='library.png') }}" alt="icon" width="40px" height="40px"></h2>
+<form method="POST" action="/add_book">
+ <div class> <input type="text" name="title" placeholder="Book Title" required> </div>
+ <br>
+  <input type="text" name="author" placeholder="Author" required> 
+  <select name="tag">
+    <option value="available_to_all">Available to All</option>
+    <option value="premium">Premium   ⭐</option>
+  </select>
+  <input type="number" name="copies" placeholder="Number of Copies" min="1" required>
+  <button type="submit">Add Book</button>
+  <link rel="stylesheet" href="style.css">
+</form>
+</div>
+<br>
+<hr>
+</div>
+</body>

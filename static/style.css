@@ -1,0 +1,55 @@
+.bluearea{
+  font-family: Arial, sans-serif;
+  background:  #6b6f72 !important;
+  text-align: center;
+}
+h1 {
+  background: white;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+form {
+  margin: 20px auto;
+  color:rgb(221, 221, 255) !important;
+  text-align: center;
+  border-radius: 10px;
+}
+ .container {
+            max-width: 500px;
+            margin-top: 80px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+input, select, button {
+  padding: 8px;
+  margin: 5px;
+}
+button {
+  background-color:#257ce5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  border-radius: 5px !important;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+p {
+  text-align: center;
+}
+html{
+background-color: rgb(255, 255, 255);
+} 
+.blue {
+  color: rgb(212, 0, 255);
+}
